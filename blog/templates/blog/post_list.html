@@ -1,0 +1,124 @@
+<html>
+     <head>
+        <title>IFPI - Programação para Internet II</title>
+		<style type="text/css">
+		#Fotos{
+		background-color: #EEE;
+		float:left;
+		margin: 20px;
+		padding: 20px;
+		-webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
+		}
+		
+		#Fotos:hover{
+		-webkit-transform: rotate(180deg); 
+		}
+		
+		#Audios{
+		background-color: #EEE;
+		float:left;
+		margin: 20px;
+		padding: 20px;
+		}
+		#Videos{
+		background-color: #EEE;
+		width: 100%;
+		float:left;
+		margin: 20px
+		padding: 20px;
+		}
+		
+		
+		#Fotos > article{
+		background-color: #ddd;
+		margin: 10px 5px 10px 5px;
+		border-bottom: 20px solid pink;
+		padding-left:10px;
+		padding-right:10px;
+		width: 95%;
+		height: 30%;
+		float:left;
+		}
+		
+		#Audios > article{
+		background-color: #ddd;
+		margin: 10px 5px 10px 5px;
+		border-bottom: 20px solid blue;
+		padding-left:10px;
+		padding-right:10px;
+		width: 95%;
+		height: 30%;
+		float:left;
+		}
+		
+		#Videos > article{
+		background-color: #ddd;
+		margin: 10px 5px 10px 5px;
+		border-bottom: 20px solid purple;
+		padding-left:30px;
+		width: 30%;
+		height: 35%;
+		float:left;
+		}
+		
+		footer{
+			width: 100%;
+			float:left;
+		}
+
+		
+		</style>
+     </head>
+     <body>
+        <header>
+            <h1>Site Desafio 3!!!</h1>
+        </header>
+        <section id="Fotos">
+            <header>
+              <h2>Fotos</h2>
+            </header> 
+            <article>
+               <img src="imagem.jfif">
+             </article>
+            <footer>
+              <p>Fotos do desafio</p>
+            </footer>
+        </section>
+		<section id="Audios">
+            <header>
+              <h2>Áudios</h2>
+            </header> 
+            <article>
+				<audio autoplay="autoplay" controls="controls">
+				  <source src="sua_musica.mp3" type="audio/mp3" />
+				  seu navegador não suporta HTML5
+				</audio>
+             </article>
+            <footer>
+              <p>Áudios do desafio</p>
+            </footer>
+        </section>
+		<section id="Videos">
+            <header>
+              <h2>Vídeos</h2>
+            </header> 
+            <article>
+				 <video width="320" height="240" src="dizzy.mp4" controls="">
+					   Seu navegador não suporta a tag video
+				 </video>
+			</article>
+			<article>
+				 <iframe width="320" height="240" src="https://www.youtube.com/embed/tAGnKpE4NCI" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				 </iframe>
+             </article>
+            <footer>
+              <p>Vídeos do desafio</p>
+            </footer>
+        </section>
+        <footer>
+            <p>Todos os direitos reservados a mim.</p>
+        </footer>
+     </body> 
+  </html>
