@@ -1,0 +1,31 @@
+
+
+{% extends 'blog/base.html' %}
+
+{% block dinamico %}
+	<div class="post">
+		{% if post.published_date %}
+			<div class="date">
+				{{ post.published_date }}
+			</div>
+		{% endif %}
+
+		<a href="{% url 'post_edit' pk=post.pk %}"> Editar Post </a>
+		<br>
+		<a href="{% url 'post_remove' pk=post.pk %}"> Deletar Post </a>
+
+
+		<h1>{{ post.title }}</h1>
+		
+		<p>
+		
+		{% if post.photo %}
+			<img src="{{ post.photo.url }}" alt="..."/>
+		{% endif %}
+
+		{{ post.text|linebreaksbr }}</p>
+	</div>
+{% endblock %}
+
+
+
