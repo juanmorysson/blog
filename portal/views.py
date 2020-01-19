@@ -3,6 +3,7 @@ from django.utils import timezone
 from .models import Noticia, Area
 from .forms import NoticiaForm, AreaForm
 from django.shortcuts import redirect
+from PIL import Image
 
 # Create your views here.
 
