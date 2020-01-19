@@ -1,0 +1,16 @@
+
+
+{% extends 'portal/base.html' %}
+
+{% block dinamico %}
+		<a href="{% url 'noticia_new'%}">Nova notícia</a>
+		<br>
+		{% for noticia in noticias %}
+			<div>
+				<h1><a href="{% url 'noticia_detail' pk=noticia.pk %}">{{ noticia.titulo }}</a></h1>
+			</div>
+		{% endfor %}
+
+{% endblock %}
+
+

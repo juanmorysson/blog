@@ -1,0 +1,17 @@
+
+
+{% extends 'portal/base.html' %}
+
+{% block dinamico %}
+		<a href="{% url 'area_new'%}">Nova area</a>
+		<br>
+		{% for area in areas %}
+			<div>
+				<h1><a href="{% url 'area_detail' pk=area.pk %}">{{ area.descricao }}</a></h1>
+				<p> {{ area.cor }} - {{ area.status }} </p>
+			</div>
+		{% endfor %}
+
+{% endblock %}
+
+

@@ -1,0 +1,31 @@
+
+
+{% extends 'portal/base.html' %}
+
+{% block dinamico %}
+	<div class="post">
+		{% if noticia.data_publicacao %}
+			<div class="date">
+				{{ noticia.data_publicacao }}
+			</div>
+		{% endif %}
+
+		<a href="{% url 'noticia_edit' pk=noticia.pk %}"> Editar noticia </a>
+		<br>
+		<a href="{% url 'noticia_remove' pk=noticia.pk %}"> Deletar noticia </a>
+
+
+		<h1>{{ noticia.titulo }}</h1>
+		
+		<p>
+		
+		{% if noticia.foto %}
+			<img src="{{ noticia.foto.url }}" alt="..."/>
+		{% endif %}
+
+		{{ noticia.texto|linebreaksbr }}</p>
+	</div>
+{% endblock %}
+
+
+

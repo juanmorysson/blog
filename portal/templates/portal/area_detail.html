@@ -1,0 +1,27 @@
+
+
+{% extends 'portal/base.html' %}
+
+{% block dinamico %}
+	<div class="post">
+
+		<a href="{% url 'area_edit' pk=area.pk %}"> Editar area </a>
+		<br>
+		<a href="{% url 'area_remove' pk=area.pk %}"> Deletar area </a>
+
+
+		<h1>{{ area.descricao }}</h1>
+		
+		<p>
+		{{ area.cor }}
+		</p>
+		
+		<p>
+		{{ area.status }}
+		</p>
+
+	</div>
+{% endblock %}
+
+
+
